@@ -3,6 +3,9 @@ Rough example of using React Context API to control the side menu and custom pag
 
 _Please keep in mind this is not production ready as there are some enhancements needed to improve amount of re-renders, smoothness of page navigation using url, this was simply done as an example._
 
+![Screenshot 1 ](https://i.ibb.co/k1RQCsn/Screenshot-2021-02-11-at-22-44-55.png)
+![Screenshot 2 ](https://i.ibb.co/744zdjB/Screenshot-2021-02-11-at-22-45-06.png)
+
 - Use only with ios in mobile view
 
 # **View in mobile view as an iOS device in web**
