@@ -1,4 +1,3 @@
-import { optionsSharp } from "ionicons/icons";
 import React, { useContext, useState } from "react";
 
 const SideMenuContext = React.createContext();
