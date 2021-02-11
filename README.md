@@ -10,6 +10,8 @@ Rough example of using React Context API to control the side menu and custom pag
 - Changing side menu with react context api hook
 - Easy custom Side Menu per tab
 
+_Please keep in mind this is not production ready as there are some enhancements needed to improve amount of re-renders, smoothness of page navigation using url, this was simply done as an example._
+
 ## Example of side menu options to pass to the side menu context
 ```js
 const sideMenuOptions = [
