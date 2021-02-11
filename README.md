@@ -8,6 +8,8 @@ _Please keep in mind this is not production ready as there are some enhancements
 # **View in mobile view as an iOS device in web**
 
 # Run
+`npm install`
+then
 `ionic serve`
 
 - Custom TabMenu with TabRoutes
