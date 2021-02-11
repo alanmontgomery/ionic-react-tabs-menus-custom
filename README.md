@@ -27,5 +27,5 @@ const sideMenuOptions = [
 	}
 ];
 ```
-  > url can be like `/tabs/tab1`
-  > clickEvent can be a clickEvent local to the current tab like showing a modal or doing something else
+- url can be like `/tabs/tab1`
+- clickEvent can be a clickEvent which is local to the current tab like showing a modal or doing something else
