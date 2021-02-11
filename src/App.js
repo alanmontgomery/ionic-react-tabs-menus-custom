@@ -23,7 +23,6 @@ import './theme/variables.css';
 //	Import tabs
 import { Tabs } from "./main/TabRoutes";
 import SideMenu from './main/SideMenu';
-import { settingsOutline } from 'ionicons/icons';
 import { SideMenuProvider } from "./main/SideMenuProvider";
 
 const App = () => {
