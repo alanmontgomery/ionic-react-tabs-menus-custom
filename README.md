@@ -15,6 +15,7 @@ then
 - Custom TabMenu with TabRoutes
 - Changing side menu with react context api hook
 - Easy custom Side Menu per tab
+- Add an object to tabs array in `TabRoutes.js` to add a new tab to the main tab bar
 
 ## Example of side menu options to pass to the side menu context
 ```js
