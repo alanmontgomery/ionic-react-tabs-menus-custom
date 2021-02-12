@@ -1,10 +1,6 @@
 # ionic-react-tabs-menus-custom
 Rough example of using React Context API to control the side menu and custom page content, tabs etc
 
-- Use only with ios in mobile view as put together quickly for ios style
-
-# **View in mobile view as an iOS device in web**
-
 # Run
 `npm install`
 then
@@ -20,16 +16,21 @@ then
 ```js
 const sideMenuOptions = [
 	{
+		text: "Go to Profile",
+		icon: personOutline,
+		url: "/tabs/tab1"
+	},
+	{
 		text: "Unread",
 		icon: mailUnreadOutline,
 		url: null,
-		clickEvent: () => handleModal(0)
+		clickEvent: () => handleModal(1)
 	},
 	{
 		text: "Archived",
 		icon: archiveOutline,
 		url: null,
-		clickEvent: () => handleModal(1)
+		clickEvent: () => handleModal(2)
 	}
 ];
 ```
