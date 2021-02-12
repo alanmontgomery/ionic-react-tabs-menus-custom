@@ -9,8 +9,8 @@ const SideMenu = (props) => {
 
 	return (
 		<IonMenu contentId={ menuOptions.pageName } side={ menuOptions.side } type={ type }>
-			<IonHeader collapse="condense">
-				<IonToolbar translucent>
+			<IonHeader>
+				<IonToolbar>
 					<IonTitle>Menu</IonTitle>
 				</IonToolbar>
 			</IonHeader>
