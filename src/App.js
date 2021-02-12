@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { IonApp, IonSplitPane } from '@ionic/react';
+import React from "react";
+import { IonApp } from '@ionic/react';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -28,14 +28,13 @@ import { SideMenuProvider } from "./main/SideMenuProvider";
 const App = () => {
 
 	return (
-		<SideMenuProvider>
+		
 			<IonApp>
-				<IonSplitPane contentId="main">
+				<SideMenuProvider>
 					<Tabs />
 					<SideMenu />
-				</IonSplitPane>
+				</SideMenuProvider>
 			</IonApp>
-		</SideMenuProvider>
 	);
 };
 

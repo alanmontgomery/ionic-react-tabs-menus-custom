@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { IonCol, IonGrid, IonPage, IonRow, IonText } from '@ionic/react';
-import { eyeOutline, logOutOutline, mailOutline, settingsOutline } from 'ionicons/icons';
+import { IonButton, IonCol, IonGrid, IonPage, IonRow, IonText } from '@ionic/react';
+import { eyeOutline, logOutOutline, settingsOutline } from 'ionicons/icons';
 
 import './Tab1.css';
 import CustomPage from "../main/CustomPage";
@@ -8,6 +8,7 @@ import CustomPage from "../main/CustomPage";
 import { PageHeader } from "../components/PageHeader";
 import { Modal } from "../components/Modal";
 import { useSideMenuUpdate, useSideMenu } from "../main/SideMenuProvider";
+import { Link } from "react-router-dom";
 
 const Tab1 = props => {
 
@@ -68,6 +69,14 @@ const Tab1 = props => {
 								<p>Contact me on twitter if you need anything else :)</p>
 								<a href="https://twitter.com/intent/tweet?screen_name=93alan&ref_src=twsrc%5Etfw" className="twitter-mention-button" data-size="large" data-related="93alan,93alan" data-dnt="true" data-show-count="false">Tweet to @93alan</a>
 							</IonText>
+						</IonCol>
+					</IonRow>
+
+					<IonRow className="ion-text-center">
+						<IonCol size="12">
+							<Link to="/tabs/tab1/settings">
+								<IonButton size="large" color="primary">Settings Sub Page</IonButton>
+							</Link>
 						</IonCol>
 					</IonRow>
 				</IonGrid>

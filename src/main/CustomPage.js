@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonHeader, IonContent, IonToolbar, IonTitle, IonButtons, IonMenuButton, IonBackButton, IonIcon } from '@ionic/react';
-import { arrowBackSharp, chevronBackSharp } from 'ionicons/icons';
+import { arrowBackSharp, chevronBack, chevronBackSharp } from 'ionicons/icons';
 
 const CustomPage = (props) => {
 
@@ -10,7 +10,7 @@ const CustomPage = (props) => {
 		sideMenu = false, 
 		sideMenuPosition = "end", 
 		backButton = false,
-		backButtonIcon = arrowBackSharp,
+		backButtonIcon = chevronBack,
 		backButtonText = " ", 
 		backButtonPath,
 		actionButton = false,

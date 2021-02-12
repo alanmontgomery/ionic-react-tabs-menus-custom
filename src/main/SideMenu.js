@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { IonHeader, IonContent, IonToolbar, IonTitle, IonMenuToggle, IonItem, IonIcon, IonMenu, IonLabel, IonList, IonListHeader } from '@ionic/react';
+import { IonHeader, IonContent, IonToolbar, IonTitle, IonMenuToggle, IonItem, IonIcon, IonMenu, IonLabel, IonList } from '@ionic/react';
 import { BrowserRouter } from 'react-router-dom';
 import { useSideMenu } from "../main/SideMenuProvider";
 

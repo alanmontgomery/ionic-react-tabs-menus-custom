@@ -1,5 +1,5 @@
 import { IonGrid, IonRow, IonCol, IonModal, IonButtons, IonButton, IonIcon, IonContent, IonHeader, IonToolbar, IonTitle } from "@ionic/react";
-import { arrowBackSharp } from "ionicons/icons";
+import { chevronBack } from "ionicons/icons";
 
 export const Modal = props => (
 
@@ -9,7 +9,7 @@ export const Modal = props => (
 				<IonTitle>{ props.modalOptions.text }</IonTitle>
 				<IonButtons slot="start">
 					<IonButton onClick={ () => props.close(false) }>
-						<IonIcon icon={ arrowBackSharp } />
+						<IonIcon size="large" icon={ chevronBack } style={{ marginLeft: "-0.7rem" }} />
 					</IonButton>
 				</IonButtons>
 			</IonToolbar>
