@@ -23,8 +23,8 @@ const CustomPage = (props) => {
     
     return (
         <>
-            <IonHeader collapse="condense">
-                <IonToolbar translucent>
+            <IonHeader>
+                <IonToolbar>
 
 					<IonTitle>{ name }</IonTitle>
 

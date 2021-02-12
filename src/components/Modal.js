@@ -4,7 +4,7 @@ import { chevronBack } from "ionicons/icons";
 export const Modal = props => (
 
 	<IonModal isOpen={ props.showModal }>
-		<IonHeader collapse="condense">
+		<IonHeader>
 			<IonToolbar>
 				<IonTitle>{ props.modalOptions.text }</IonTitle>
 				<IonButtons slot="start">

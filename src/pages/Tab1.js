@@ -70,7 +70,7 @@ const Tab1 = props => {
 			
 			setSideMenu({ options: sideMenuOptions, side: "start", pageName: pageName });
 		}
-	}, []);
+	}, [ props.location ]);
 
 	return (
 		<IonPage id={ pageName }>
