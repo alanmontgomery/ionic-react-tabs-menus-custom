@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { archiveOutline, mailUnreadOutline } from 'ionicons/icons';
+import { archiveOutline, mailUnreadOutline, mapOutline, personOutline } from 'ionicons/icons';
 import { useSideMenuUpdate, useSideMenu } from "../main/SideMenuProvider";
 
 import './Tab2.css';
@@ -27,6 +27,17 @@ const Tab2 = props => {
 	const sideMenu = useSideMenu();
 
 	const sideMenuOptions = [
+		{ 
+			text: "Go to Profile", 
+			icon: personOutline, 
+			url: "/tabs/tab1"
+		},
+		{ 
+			text: "Go to Places", 
+			icon: mapOutline, 
+			url: "/tabs/tab3"
+		},
+		{},
 		{
 			text: "Unread",
 			icon: mailUnreadOutline,

@@ -36,15 +36,17 @@ const SideMenu = (props) => {
 								);
 							} else {
 
-								return (
+								if (menuOption.url !== null) {
+									return (
 
-									<IonMenuToggle key={ i } autoHide={ true }>
-										<IonItem routerLink={ menuOption.url } lines="full">
-											<IonIcon slot="start" icon={ menuOption.icon } />
-											<IonLabel>{ menuOption.text }</IonLabel>
-										</IonItem>
-									</IonMenuToggle>
-								);
+										<IonMenuToggle key={ i } autoHide={ true }>
+											<IonItem routerLink={ menuOption.url } lines="full">
+												<IonIcon slot="start" icon={ menuOption.icon } />
+												<IonLabel>{ menuOption.text }</IonLabel>
+											</IonItem>
+										</IonMenuToggle>
+									);
+								}
 							}
 						})}
 					</IonList>

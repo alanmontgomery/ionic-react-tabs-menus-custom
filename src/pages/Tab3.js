@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSideMenuUpdate, useSideMenu } from "../main/SideMenuProvider";
-import { beerOutline, golfOutline, pulseOutline, restaurantOutline } from "ionicons/icons";
+import { beerOutline, golfOutline, mailOutline, personOutline, pulseOutline, restaurantOutline } from "ionicons/icons";
 
 import './Tab3.css';
 import CustomPage from "../main/CustomPage";
@@ -27,7 +27,18 @@ const Tab3 = props => {
 	const sideMenu = useSideMenu();
 
 	const sideMenuOptions = [
-
+		
+		{ 
+			text: "Go to Profile", 
+			icon: personOutline, 
+			url: "/tabs/tab1"
+		},
+		{ 
+			text: "Go to Inbox", 
+			icon: mailOutline, 
+			url: "/tabs/tab2"
+		},
+		{},
 		{
 			text: "Pubs",
 			icon: beerOutline,

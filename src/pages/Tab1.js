@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { IonButton, IonCol, IonGrid, IonPage, IonRow, IonText } from '@ionic/react';
-import { cogOutline, eyeOutline, logOutOutline, settingsOutline } from 'ionicons/icons';
+import { cogOutline, eyeOutline, logOutOutline, mailOutline, mapOutline, settingsOutline } from 'ionicons/icons';
 
 import './Tab1.css';
 import CustomPage from "../main/CustomPage";
@@ -28,6 +28,17 @@ const Tab1 = props => {
 	const sideMenu = useSideMenu();
 
 	const sideMenuOptions = [
+		{ 
+			text: "Go to Inbox", 
+			icon: mailOutline, 
+			url: "/tabs/tab2"
+		},
+		{ 
+			text: "Go to Places", 
+			icon: mapOutline, 
+			url: "/tabs/tab3"
+		},
+		{},
 		{ 
 			text: "Account Settings", 
 			icon: settingsOutline, 
