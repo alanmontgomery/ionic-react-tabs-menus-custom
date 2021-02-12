@@ -16,6 +16,11 @@ then
 ```js
 const sideMenuOptions = [
 	{
+		text: "Go to Profile",
+		icon: personOutline,
+		url: "/tabs/tab1"
+	},
+	{
 		text: "Unread",
 		icon: mailUnreadOutline,
 		url: null,
