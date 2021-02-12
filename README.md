@@ -24,13 +24,13 @@ const sideMenuOptions = [
 		text: "Unread",
 		icon: mailUnreadOutline,
 		url: null,
-		clickEvent: () => handleModal(0)
+		clickEvent: () => handleModal(1)
 	},
 	{
 		text: "Archived",
 		icon: archiveOutline,
 		url: null,
-		clickEvent: () => handleModal(1)
+		clickEvent: () => handleModal(2)
 	}
 ];
 ```
