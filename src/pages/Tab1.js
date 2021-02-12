@@ -43,7 +43,7 @@ const Tab1 = props => {
 			text: "Account Settings", 
 			icon: settingsOutline, 
 			url: null,
-			clickEvent: () => handleModal(0)
+			clickEvent: () => handleModal(3)
 		},
 		{ 
 			text: "Settings sub page", 
@@ -54,13 +54,13 @@ const Tab1 = props => {
 			text: "Privacy", 
 			icon: eyeOutline, 
 			url: null,
-			clickEvent: () => handleModal(1)
+			clickEvent: () => handleModal(5)
 		},
 		{ 
 			text: "Logout", 
 			icon: logOutOutline, 
 			url: null,
-			clickEvent: () => handleModal(2)
+			clickEvent: () => handleModal(6)
 		}
 	];
 

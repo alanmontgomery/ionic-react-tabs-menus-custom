@@ -42,13 +42,13 @@ const Tab2 = props => {
 			text: "Unread",
 			icon: mailUnreadOutline,
 			url: null,
-			clickEvent: () => handleModal(0)
+			clickEvent: () => handleModal(3)
 		},
 		{
 			text: "Archived",
 			icon: archiveOutline,
 			url: null,
-			clickEvent: () => handleModal(1)
+			clickEvent: () => handleModal(4)
 		}
 	];
 

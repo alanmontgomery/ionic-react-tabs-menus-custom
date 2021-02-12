@@ -43,25 +43,25 @@ const Tab3 = props => {
 			text: "Pubs",
 			icon: beerOutline,
 			url: null,
-			clickEvent: () => handleModal(0)
+			clickEvent: () => handleModal(3)
 		},
 		{
 			text: "Restaurants",
 			icon: restaurantOutline,
 			url: null,
-			clickEvent: () => handleModal(1)
+			clickEvent: () => handleModal(4)
 		},
 		{
 			text: "Golf Courses",
 			icon: golfOutline,
 			url: null,
-			clickEvent: () => handleModal(2)
+			clickEvent: () => handleModal(5)
 		},
 		{
 			text: "Hospitals",
 			icon: pulseOutline,
 			url: null,
-			clickEvent: () => handleModal(3)
+			clickEvent: () => handleModal(6)
 		}
 	];
 
