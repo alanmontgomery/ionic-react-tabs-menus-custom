@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonHeader, IonContent, IonToolbar, IonTitle, IonButtons, IonMenuButton, IonBackButton, IonIcon } from '@ionic/react';
+import { IonHeader, IonContent, IonToolbar, IonTitle, IonButtons, IonMenuButton, IonBackButton, IonIcon, IonSearchbar } from '@ionic/react';
 import { chevronBack } from 'ionicons/icons';
 
 const CustomPage = (props) => {
@@ -18,14 +18,15 @@ const CustomPage = (props) => {
 		actionButtonIcon,
 		actionButtonIconSize,
 		actionButtonClickEvent,
-		contentClass
+        contentClass,
+        searchbar = false,
+        searchbarEvent
 	} = props;
     
     return (
         <>
             <IonHeader translucent={ true }>
                 <IonToolbar>
-
 					<IonTitle>{ name }</IonTitle>
 
                     { backButton &&
@@ -52,7 +53,8 @@ const CustomPage = (props) => {
 
                 <IonHeader collapse="condense">
                     <IonToolbar>
-                        <IonTitle size="large">{ name }</IonTitle>
+                        <IonTitle slot="start" size="large">{ name }</IonTitle>
+                        { searchbar && <IonSearchbar style={{ marginTop: "-0.2rem", width: "50%", float: "right" }} onKeyUp={ e => searchbarEvent(e) } onChange={ e => searchbarEvent(e) } /> }
                     </IonToolbar>
                 </IonHeader>
                 { mainContent }

@@ -6,7 +6,7 @@ export const Modal = props => (
 	<IonModal isOpen={ props.showModal }>
 		<IonHeader>
 			<IonToolbar>
-				<IonTitle>{ props.modalOptions.text }</IonTitle>
+				<IonTitle>{ props.modalOptions.text ? props.modalOptions.text : props.modalOptions.name }</IonTitle>
 				<IonButtons slot="start">
 					<IonButton onClick={ () => props.close(false) }>
 						<IonIcon size="large" icon={ chevronBack } style={{ marginLeft: "-0.7rem" }} />
@@ -22,6 +22,15 @@ export const Modal = props => (
 							<IonIcon style={{ fontSize: "5rem" }} icon={ props.modalOptions.icon } />
 						</IonCol>
 					</IonRow>
+
+					{ props.modalOptions.name && 
+
+						<IonRow className="ion-text-center">
+							<IonCol size="12">
+								<h3>{ props.modalOptions.name }</h3>
+							</IonCol>
+						</IonRow>
+					}
 				</IonGrid>
 			</IonContent>
 	</IonModal>
