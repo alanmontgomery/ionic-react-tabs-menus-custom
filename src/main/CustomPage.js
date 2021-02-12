@@ -23,7 +23,7 @@ const CustomPage = (props) => {
     
     return (
         <>
-            <IonHeader>
+            <IonHeader translucent={ true }>
                 <IonToolbar>
 
 					<IonTitle>{ name }</IonTitle>
@@ -49,6 +49,12 @@ const CustomPage = (props) => {
             </IonHeader>
 
             <IonContent className={ contentClass } fullscreen>
+
+                <IonHeader collapse="condense">
+                    <IonToolbar>
+                        <IonTitle size="large">{ name }</IonTitle>
+                    </IonToolbar>
+                </IonHeader>
                 { mainContent }
             </IonContent>
         </>
