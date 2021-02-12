@@ -81,6 +81,14 @@ const Tab1 = props => {
 
 					<IonRow className="ion-text-center">
 						<IonCol size="12">
+							<Link to="/tabs/tab1/settings">
+								<IonButton size="small" color="primary">Settings Sub Page</IonButton>
+							</Link>
+						</IonCol>
+					</IonRow>
+
+					<IonRow className="ion-text-center">
+						<IonCol size="12">
 							<IonText color="primary">
 								<p>Contact me on twitter if you need anything else :)</p>
 								<a href="https://twitter.com/intent/tweet?screen_name=93alan&ref_src=twsrc%5Etfw" className="twitter-mention-button" data-size="large" data-related="93alan,93alan" data-dnt="true" data-show-count="false">Tweet to @93alan</a>
@@ -90,9 +98,13 @@ const Tab1 = props => {
 
 					<IonRow className="ion-text-center">
 						<IonCol size="12">
-							<Link to="/tabs/tab1/settings">
-								<IonButton size="large" color="primary">Settings Sub Page</IonButton>
-							</Link>
+							<IonText>
+								<h4>Check out Mobile DevCast</h4>
+								<p>A podcast dedicated to mobile app development and web native technology like ionic & capacitor!</p>
+								<IonText color="warning">
+									<a style={{ color: "yellow" }} href="https://mobiledevcast.com" target="_blank" rel="noreferrer">https://mobiledevcast.com</a>
+								</IonText>
+							</IonText>
 						</IonCol>
 					</IonRow>
 				</IonGrid>
