@@ -73,7 +73,7 @@ const Tab3 = props => {
 				setSideMenu({ options: sideMenuOptions, side: "start", pageName: pageName });
 			}, 20);
 		}
-	}, [ props.location ]);
+	}, []);
 
 	return (
 		<IonPage id={ pageName }>
