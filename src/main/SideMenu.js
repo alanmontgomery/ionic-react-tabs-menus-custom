@@ -1,5 +1,4 @@
 import { IonHeader, IonContent, IonToolbar, IonTitle, IonMenuToggle, IonItem, IonIcon, IonMenu, IonLabel, IonList } from '@ionic/react';
-import { BrowserRouter } from 'react-router-dom';
 import { useSideMenu } from "../main/SideMenuProvider";
 
 const SideMenu = (props) => {
@@ -9,51 +8,49 @@ const SideMenu = (props) => {
 	const menuOptions = useSideMenu();
 
 	return (
-		<BrowserRouter>
-			<IonMenu contentId={ menuOptions.pageName } side={ menuOptions.side } type={ type }>
-				<IonHeader collapse="condense">
-					<IonToolbar translucent>
-						<IonTitle>Menu</IonTitle>
-					</IonToolbar>
-				</IonHeader>
+		<IonMenu contentId={ menuOptions.pageName } side={ menuOptions.side } type={ type }>
+			<IonHeader collapse="condense">
+				<IonToolbar translucent>
+					<IonTitle>Menu</IonTitle>
+				</IonToolbar>
+			</IonHeader>
 
-				<IonContent id="main">
+			<IonContent id="main">
 
-					{ mainContent }
+				{ mainContent }
 
-					{ menuOptions !== null &&
-						<IonList>
-							{ menuOptions && menuOptions.options.map((menuOption, i) => {
-								
-								if (menuOption.url === null) {
+				{ menuOptions !== null &&
+					<IonList>
+						{ menuOptions && menuOptions.options.map((menuOption, i) => {
+							
+							if (menuOption.url === null) {
 
-									return (
+								return (
 
-										<IonMenuToggle key={ i } autoHide={ true }>
-											<IonItem onClick={ menuOption.clickEvent } lines="full" detail={ true }>
-												<IonIcon slot="start" icon={ menuOption.icon } />
-												<IonLabel>{ menuOption.text }</IonLabel>
-											</IonItem>
-										</IonMenuToggle>
-									);
-								} else {
+									<IonMenuToggle key={ i } autoHide={ true }>
+										<IonItem onClick={ menuOption.clickEvent } lines="full" detail={ true }>
+											<IonIcon slot="start" icon={ menuOption.icon } />
+											<IonLabel>{ menuOption.text }</IonLabel>
+										</IonItem>
+									</IonMenuToggle>
+								);
+							} else {
 
-									return (
+								return (
 
-										<IonMenuToggle key={ i } autoHide={ true }>
-											<IonItem routerLink={ menuOption.url } routerDirection="none" lines="full">
-												<IonIcon slot="start" icon={ menuOption.icon } />
-												<IonLabel>{ menuOption.text }</IonLabel>
-											</IonItem>
-										</IonMenuToggle>
-									);
-								}
-							})}
-						</IonList>
-					}
-				</IonContent>
-			</IonMenu>
-        </BrowserRouter>
+									<IonMenuToggle key={ i } autoHide={ true }>
+										<IonItem routerLink={ menuOption.url } lines="full">
+											<IonIcon slot="start" icon={ menuOption.icon } />
+											<IonLabel>{ menuOption.text }</IonLabel>
+										</IonItem>
+									</IonMenuToggle>
+								);
+							}
+						})}
+					</IonList>
+				}
+			</IonContent>
+		</IonMenu>
 	);
 };
 

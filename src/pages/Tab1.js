@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { IonButton, IonCol, IonGrid, IonPage, IonRow, IonText } from '@ionic/react';
-import { eyeOutline, logOutOutline, settingsOutline } from 'ionicons/icons';
+import { cogOutline, eyeOutline, logOutOutline, settingsOutline } from 'ionicons/icons';
 
 import './Tab1.css';
 import CustomPage from "../main/CustomPage";
@@ -33,6 +33,11 @@ const Tab1 = props => {
 			icon: settingsOutline, 
 			url: null,
 			clickEvent: () => handleModal(0)
+		},
+		{ 
+			text: "Settings sub page", 
+			icon: cogOutline, 
+			url: "/tabs/tab1/settings"
 		},
 		{ 
 			text: "Privacy", 

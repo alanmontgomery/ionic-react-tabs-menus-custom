@@ -32,7 +32,6 @@ const App = () => {
 			<IonApp>
 				<SideMenuProvider>
 					<Tabs />
-					<SideMenu />
 				</SideMenuProvider>
 			</IonApp>
 	);

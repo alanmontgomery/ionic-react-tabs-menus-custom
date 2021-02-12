@@ -2,11 +2,15 @@ import React from "react";
 import { IonIcon, IonLabel, IonTabBar, IonTabButton, IonTabs, IonRouterOutlet } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import { Redirect, Route } from "react-router-dom";
+import SideMenu from "./SideMenu";
 
 const TabMenu = (props) => {
 
 	return (
 		<IonReactRouter contentId="main">
+
+			<SideMenu />
+
 			<IonTabs>
 				<IonRouterOutlet id="main">
 

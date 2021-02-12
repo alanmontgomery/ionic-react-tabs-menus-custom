@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonHeader, IonContent, IonToolbar, IonTitle, IonButtons, IonMenuButton, IonBackButton, IonIcon } from '@ionic/react';
-import { arrowBackSharp, chevronBack, chevronBackSharp } from 'ionicons/icons';
+import { chevronBack } from 'ionicons/icons';
 
 const CustomPage = (props) => {
 

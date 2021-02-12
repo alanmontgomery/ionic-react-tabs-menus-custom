@@ -1,5 +1,5 @@
 import { IonCol, IonGrid, IonPage, IonRow } from '@ionic/react';
-import { addOutline } from 'ionicons/icons';
+import { addOutline, chevronBack } from 'ionicons/icons';
 
 import './Tab1.css';
 import CustomPage from "../main/CustomPage";
@@ -10,7 +10,7 @@ const Settings = props => {
 
 	return (
 		<IonPage id={ pageName }>
-			<CustomPage name={ pageName } sideMenu={ false } sideMenuPosition="start" backButton={ true } actionButton={ true } actionButtonIcon={ addOutline } actionButtonPosition="end" actionButtonIconSize="1.7rem">
+			<CustomPage name={ pageName } sideMenu={ false } sideMenuPosition="start" backButton={ true } backButtonIcon={ chevronBack } actionButton={ true } actionButtonIcon={ addOutline } actionButtonPosition="end" actionButtonIconSize="1.7rem">
 				<IonGrid>
 					
 					<IonRow className="ion-text-center">
