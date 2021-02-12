@@ -1,9 +1,7 @@
 # ionic-react-tabs-menus-custom
 Rough example of using React Context API to control the side menu and custom page content, tabs etc
 
-_Please keep in mind this is not production ready as there are some enhancements needed to improve amount of re-renders, smoothness of page navigation using url (separate history/location for tab and side menu - needs work, feel free to submit a PR to finish up this example), this was simply done as an example._
-
-- Use only with ios in mobile view
+- Use only with ios in mobile view as put together quickly for ios style
 
 # **View in mobile view as an iOS device in web**
 
@@ -13,6 +11,7 @@ then
 `ionic serve`
 
 - Custom TabMenu with TabRoutes
+- Navigate to a url (page) or perform an action by click event
 - Changing side menu with react context api hook
 - Easy custom Side Menu per tab
 - Add an object to tabs array in `TabRoutes.js` to add a new tab to the main tab bar
