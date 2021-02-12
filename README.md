@@ -22,11 +22,11 @@ __Other things included__
 - Accessing properties associated to the current side menu setup in a tab page using context api
 
 ## Adding a new tab to the tab menu
-1. Go to TabRoutes.js
+1. Go to `TabRoutes.js`
 2. Add an object to the `tabs` array specifying a label, component, icon, path and a few flags
 
 ## Adding a new sub-page to app
-1. Go to TabRoutes.js
+1. Go to `TabRoutes.js`
 2. Add an object to the `subPages` array specifying a label, component, icon, path setting `isTab` bool to false
 
 ## Changing the side menu per tab
@@ -37,7 +37,7 @@ __Other things included__
 
 ## Adding a back button, action button with associated properties
 1. Look at `CustomPage.js` and what props it expects
-2. You can easily make a back button, action button (like add, search or something which could open a modal or navigate to a page) to the toolbar
+2. You can easily add a back button, action button (like add, search or something which could open a modal or navigate to a page) to the toolbar
 
 ## Example of side menu options to pass to the side menu context
 ```js
