@@ -40,7 +40,7 @@ __Other things included__
 2. Add an object to the `subPageRoutes` array specifying a label, component, icon, path setting `isTab` bool to false
 
 ## Changing the side menu per tab
-1. Find the relative `sideMenuOptions` within the `PageSideMenus.js` file
+1. Find the relative `sideMenu` within the `PageSideMenus.js` file, e.g. `tab1SideMenu`
 2. Alter one of the objects in the array or add one by changing the params passed to the `buildSideMenuObject` function or call the function for a new one
 3. Alternatively, remove or add a new menu completely by creating a new array
 4. Specify the side you want the side menu button to appear in the `useEffect` on the main tab component
