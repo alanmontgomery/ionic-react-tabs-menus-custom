@@ -20,7 +20,8 @@ const CustomPage = (props) => {
             actionButtonClickEvent,
             contentClass,
             searchbar = false,
-            searchbarEvent
+            searchbarEvent,
+            showLargeHeader = true
 	} = props;
     
     return (
@@ -50,13 +51,15 @@ const CustomPage = (props) => {
             </IonHeader>
 
             <IonContent className={ contentClass } fullscreen>
-
-                <IonHeader collapse="condense">
-                    <IonToolbar>
-                        <IonTitle slot="start" size="large">{ name }</IonTitle>
-                        { searchbar && <IonSearchbar style={{ marginTop: "-0.2rem", width: "50%", float: "right" }} onKeyUp={ e => searchbarEvent(e) } onChange={ e => searchbarEvent(e) } /> }
-                    </IonToolbar>
-                </IonHeader>
+                
+                { showLargeHeader &&
+                    <IonHeader collapse="condense">
+                        <IonToolbar>
+                            <IonTitle slot="start" size="large">{ name }</IonTitle>
+                            { searchbar && <IonSearchbar style={{ marginTop: "-0.2rem", width: "50%", float: "right" }} onKeyUp={ e => searchbarEvent(e) } onChange={ e => searchbarEvent(e) } /> }
+                        </IonToolbar>
+                    </IonHeader>
+                }
                 { mainContent }
             </IonContent>
         </>

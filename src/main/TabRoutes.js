@@ -5,6 +5,7 @@ import Tab3 from "../pages/Tab3";
 
 //  Sub pages from tabs
 import Settings from "../pages/Settings";
+import InboxItem from "../pages/InboxItem";
 
 //	Tab icons
 import { personOutline, mailOutline, mapOutline } from "ionicons/icons";
@@ -23,7 +24,8 @@ const tabs = [
 //  Array of objects representing sub pages
 const subPages = [
 
-    { component: Settings, path: "/tabs/tab1/settings", default: false, isTab: false }
+    { component: Settings, path: "/tabs/tab1/settings", default: false, isTab: false },
+    { component: InboxItem, path: "/tabs/tab2/:id", default: false, isTab: false },
 ];
 
 const tabsAndPages = [ ...tabs, ...subPages ];
