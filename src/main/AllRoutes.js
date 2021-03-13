@@ -25,7 +25,7 @@ export const tabRoutes = [
 //  Array of objects representing sub pages
 const subPageRoutes = [
 
-    { component: Settings, path: "/tabs/tab1/settings", default: false, isTab: false },
+    { component: Settings, path: "/settings", default: false, isTab: false },
     { component: InboxItem, path: "/inbox/:id", default: false, isTab: false },
 ];
 

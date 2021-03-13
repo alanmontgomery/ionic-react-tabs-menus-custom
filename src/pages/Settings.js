@@ -10,7 +10,7 @@ const Settings = props => {
 
 	return (
 		<IonPage id={ pageName }>
-			<CustomPage name={ pageName } sideMenu={ false } sideMenuPosition="start" backButton={ true } backButtonIcon={ chevronBack } actionButton={ true } actionButtonIcon={ addOutline } actionButtonPosition="end" actionButtonIconSize="1.7rem">
+			<CustomPage name={ pageName } sideMenu={ false } sideMenuPosition="start" backButton={ true } backButtonText="Profile" actionButton={ true } actionButtonIcon={ addOutline } actionButtonPosition="end" actionButtonIconSize="1.7rem">
 				<IonGrid>
 					
 					<IonRow className="ion-text-center">
