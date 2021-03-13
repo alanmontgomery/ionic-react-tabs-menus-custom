@@ -40,36 +40,27 @@ __Other things included__
 2. Add an object to the `subPageRoutes` array specifying a label, component, icon, path setting `isTab` bool to false
 
 ## Changing the side menu per tab
-1. Find the `sideMenuOptions` within the main tab JS file, e.g. `Tab1.js`
-2. Alter one of the objects in the array or add one
-3. Alternatively, remove or add a new menu completely
-4. Specify the side you want the side menu button to appear in the `useEffect` on the main tab
+1. Find the relative `sideMenuOptions` within the `PageSideMenus.js` file
+2. Alter one of the objects in the array or add one by changing the params passed to the `buildSideMenuObject` function or call the function for a new one
+3. Alternatively, remove or add a new menu completely by creating a new array
+4. Specify the side you want the side menu button to appear in the `useEffect` on the main tab component
 
 ## Adding a back button, action button with associated properties
 1. Look at `CustomPage.js` and what props it expects
 2. You can easily add a back button, action button (like add, search or something which could open a modal or navigate to a page) to the toolbar
 
-## Example of side menu options to pass to the side menu context
+## Example of side menu options found in `PageSideMenus.js` this is then imported via AllRoutes.js
 ```js
-const sideMenuOptions = [
-	{
-		text: "Go to Profile",
-		icon: personOutline,
-		url: "/tabs/tab1"
-	},
-	{
-		text: "Unread",
-		icon: mailUnreadOutline,
-		url: null,
-		clickEvent: () => handleModal(1)
-	},
-	{
-		text: "Archived",
-		icon: archiveOutline,
-		url: null,
-		clickEvent: () => handleModal(2)
-	}
+export const tab1SideMenu = [
+
+    buildSideMenuObject(false, "Go to Inbox", mailOutline, "/tabs/tab2"),
+    buildSideMenuObject(false, "Go to Places", mapOutline, "/tabs/tab3"),
+    buildSideMenuObject(true),
+    buildSideMenuObject(false, "Account Settings", settingsOutline, null),
+    buildSideMenuObject(false, "Settings Sub Page", cogOutline, "/tabs/tab1/settings"),
+    buildSideMenuObject(false, "Privacy", eyeOutline, null),
+    buildSideMenuObject(false, "Logout", logOutOutline, null)
 ];
 ```
 - url can be like `/tabs/tab1`
-- clickEvent can be a clickEvent which is local to the current tab like showing a modal or doing something else
+- clickEvent can be a function, can be a global function call from within `PageSideMenus.js`, alternatively find your side menu option in a loop/filter on the main component and reassign the clickEvent object property
