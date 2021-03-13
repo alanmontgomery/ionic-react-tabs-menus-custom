@@ -1,5 +1,5 @@
 # ionic-react-tabs-menus-custom
-Rough example of using React Context API to control the side menu and custom page content, tabs etc
+An example project of using React Context API to control the side menu in an Ionic app using React along with ALOT of cool features and tidy ways of doing things (see below)
 
 # Run
 `npm install`
