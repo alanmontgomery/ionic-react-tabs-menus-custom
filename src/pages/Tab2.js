@@ -8,7 +8,7 @@ import CustomPage from "../main/CustomPage";
 import { PageHeader } from "../components/PageHeader";
 import { Modal } from "../components/Modal";
 import { IonBadge, IonChip, IonGrid, IonItem, IonLabel, IonList, IonNote, IonPage } from '@ionic/react';
-import { getInboxItems, showTabMenu } from "../main/Utils";
+import { getInboxItems } from "../main/Utils";
 
 const Tab2 = props => {
 
@@ -67,7 +67,6 @@ const Tab2 = props => {
 		if (props.location.pathname === "/tabs/tab2") {
 			
 			setSideMenu({ options: sideMenuOptions, side: "start", pageName: pageName });
-			showTabMenu(true);
 		}
 	}, [ props.location ]);
 
@@ -81,7 +80,7 @@ const Tab2 = props => {
 						{ inboxItems.map((item, index) => {
 
 							return (
-								<IonItem routerLink={ `/tabs/tab2/${ item.id }` } key={ `item_${ index }`} detail={ true } lines="full" detailIcon={ item.unread ? mailUnreadOutline : checkmarkOutline }>
+								<IonItem routerLink={ `/inbox/${ item.id }` } key={ `item_${ index }`} detail={ true } lines="full" detailIcon={ item.unread ? mailUnreadOutline : checkmarkOutline }>
 									<IonLabel>
 										<h2>{ item.sender }</h2>
 										<h4>{ item.subject }</h4>

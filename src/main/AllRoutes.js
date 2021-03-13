@@ -12,9 +12,10 @@ import { personOutline, mailOutline, mapOutline } from "ionicons/icons";
 
 //  Import custom tab menu
 import TabMenu from "./TabMenu";
+import SubRoutes from "./SubRoutes";
 
 //	Array of objects representing tab pages
-const tabs = [
+export const tabRoutes = [
 
     { label: "Profile", component: Tab1, icon: personOutline, path: "/tabs/tab1", default: true, isTab: true },
     { label: "Inbox", component: Tab2, icon: mailOutline, path: "/tabs/tab2", default: false, isTab: true },
@@ -22,13 +23,14 @@ const tabs = [
 ];
 
 //  Array of objects representing sub pages
-const subPages = [
+const subPageRoutes = [
 
     { component: Settings, path: "/tabs/tab1/settings", default: false, isTab: false },
-    { component: InboxItem, path: "/tabs/tab2/:id", default: false, isTab: false },
+    { component: InboxItem, path: "/inbox/:id", default: false, isTab: false },
 ];
 
-const tabsAndPages = [ ...tabs, ...subPages ];
+//  Render sub routes
+export const SubPages = () => ( <SubRoutes routes={ subPageRoutes } /> );
 
 //	Render tab menu
-export const Tabs = () => ( <TabMenu tabs={ tabsAndPages } position="bottom" /> );
+export const Tabs = () => ( <TabMenu tabs={ tabRoutes } subPages={ subPageRoutes } position="bottom" /> );

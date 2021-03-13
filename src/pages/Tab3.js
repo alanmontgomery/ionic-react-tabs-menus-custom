@@ -9,7 +9,7 @@ import { PageHeader } from "../components/PageHeader";
 import { Modal } from "../components/Modal";
 import { IonPage, IonGrid, IonList, IonItem, IonLabel, IonAvatar, IonIcon, IonBadge } from '@ionic/react';
 
-import { getPlaceItems, showTabMenu } from "../main/Utils";
+import { getPlaceItems } from "../main/Utils";
 
 const Tab3 = props => {
 
@@ -102,7 +102,6 @@ const Tab3 = props => {
 		if (props.location.pathname === "/tabs/tab3") {
 			
 			setSideMenu({ options: sideMenuOptions, side: "start", pageName: pageName });
-			showTabMenu(true);
 		}
 	}, [ props.location ]);
 

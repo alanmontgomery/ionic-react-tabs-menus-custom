@@ -9,7 +9,6 @@ import { PageHeader } from "../components/PageHeader";
 import { Modal } from "../components/Modal";
 import { useSideMenuUpdate, useSideMenu } from "../main/SideMenuProvider";
 import { Link } from "react-router-dom";
-import { showTabMenu } from "../main/Utils";
 
 const Tab1 = props => {
 
@@ -70,7 +69,6 @@ const Tab1 = props => {
 		if (props.location.pathname === "/tabs/tab1") {
 			
 			setSideMenu({ options: sideMenuOptions, side: "start", pageName: pageName });
-			showTabMenu(true);
 		}
 	}, [ props.location ]);
 

@@ -7,44 +7,39 @@ import SideMenu from "./SideMenu";
 const TabMenu = (props) => {
 
 	return (
-		<IonReactRouter contentId="main">
+		<IonTabs>
+			<IonRouterOutlet>
 
-			<SideMenu />
+				{ props.tabs.map((tab, i) => {
 
-			<IonTabs>
-				<IonRouterOutlet id="main">
+					if (tab.isTab) {
+						return <Route key={ i } path={ tab.path } component={ tab.component } exact={ true }/>;
+					} else {
 
-					{ props.tabs.map((tab, i) => {
+						return <Route key={ i } path={ tab.path } component={ tab.component } exact={ false } />;
+					}
+				})}
 
-						if (tab.isTab) {
-							return <Route key={ i } path={ tab.path } component={ tab.component } exact={ true }/>;
-						} else {
+				<Redirect exact from="/" to={ props.tabs.filter(t => t.default)[0].path.toString() }/>
+			</IonRouterOutlet>
 
-							return <Route key={ i } path={ tab.path } component={ tab.component } exact={ false } />;
-						}
-					})}
+			<IonTabBar slot={ props.position }>
 
-					<Redirect exact from="/" to={ props.tabs.filter(t => t.default)[0].path.toString() }/>
-				</IonRouterOutlet>
+				{ props.tabs.map((tab, i) => {
 
-				<IonTabBar slot={ props.position }>
+					if (tab.isTab) {
 
-					{ props.tabs.map((tab, i) => {
-
-						if (tab.isTab) {
-
-							return (
-								<IonTabButton key={ `tab_${ i + 1 }` } tab={ `tab_${ i + 1 }` } href={ tab.path }>
-									<IonIcon icon={ tab.icon } />
-									{ tab.label && <IonLabel>{ tab.label }</IonLabel> }
-								</IonTabButton>
-							);
-						}
-					})}
-				</IonTabBar>
-			</IonTabs>
-		</IonReactRouter>
+						return (
+							<IonTabButton key={ `tab_${ i + 1 }` } tab={ `tab_${ i + 1 }` } href={ tab.path }>
+								<IonIcon icon={ tab.icon } />
+								{ tab.label && <IonLabel>{ tab.label }</IonLabel> }
+							</IonTabButton>
+						);
+					}
+				})}
+			</IonTabBar>
+		</IonTabs>
 	);
-};
+}
 
 export default TabMenu;

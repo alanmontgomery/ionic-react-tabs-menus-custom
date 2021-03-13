@@ -6,7 +6,7 @@ import CustomPage from "../main/CustomPage";
 
 import { IonIcon, IonItem, IonLabel, IonNote, IonPage, useIonViewWillEnter } from '@ionic/react';
 import { useParams } from "react-router";
-import { getInboxItemByID, showTabMenu } from "../main/Utils";
+import { getInboxItemByID } from "../main/Utils";
 
 import "./InboxItem.css";
 
@@ -23,18 +23,10 @@ const InboxItem = props => {
         const tempInboxItem = getInboxItemByID(inboxItemID);
         setInboxItem(tempInboxItem);
     });
-    
-    useEffect(() => {
-		
-		if (props.location.pathname.includes("/tabs/tab2/")) {
-			
-			showTabMenu(false);
-		}
-	}, [ props.location ]);
 
 	return (
 		<IonPage id="view-inbox-item">
-			<CustomPage showLargeHeader={ false } name={ pageName } sideMenu={ false } backButton={ true }>
+			<CustomPage showLargeHeader={ false } name={ pageName } sideMenu={ false } backButton={ true } backButtonText="Inbox">
                 { inboxItem ? (
                     <>
                         <IonItem>

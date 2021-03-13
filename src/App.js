@@ -21,8 +21,8 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 
 //	Import tabs
-import { Tabs } from "./main/TabRoutes";
-import SideMenu from './main/SideMenu';
+// import { Tabs } from "./main/TabRoutes";
+import NavRoutes from "./main/NavRoutes";
 import { SideMenuProvider } from "./main/SideMenuProvider";
 
 const App = () => {
@@ -31,7 +31,8 @@ const App = () => {
 		
 			<IonApp>
 				<SideMenuProvider>
-					<Tabs />
+					<NavRoutes />
+					{/* <Tabs /> */}
 				</SideMenuProvider>
 			</IonApp>
 	);
