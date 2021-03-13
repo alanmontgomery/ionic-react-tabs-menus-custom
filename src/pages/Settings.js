@@ -1,5 +1,5 @@
 import { IonCol, IonGrid, IonPage, IonRow } from '@ionic/react';
-import { addOutline, chevronBack } from 'ionicons/icons';
+import { addOutline } from 'ionicons/icons';
 
 import './Tab1.css';
 import CustomPage from "../main/CustomPage";

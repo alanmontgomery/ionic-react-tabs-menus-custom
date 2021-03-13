@@ -21,7 +21,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 
 //	Import NavRoutes which holds tabs and sub pages
-import NavRoutes from "./main/NavRoutes";
+import NavRoutes from "./main/nav/NavRoutes";
 import { SideMenuProvider } from "./main/SideMenuProvider";
 
 const App = () => {

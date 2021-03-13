@@ -1,19 +1,19 @@
 //	Main Tabs
-import Tab1 from "../pages/Tab1"
-import Tab2 from "../pages/Tab2";
-import Tab3 from "../pages/Tab3";
+import Tab1 from "../../pages/Tab1"
+import Tab2 from "../../pages/Tab2";
+import Tab3 from "../../pages/Tab3";
 
 //  Main tab children
-import Settings from "../pages/Settings";
+import Settings from "../../pages/Settings";
 
 //  Sub pages
-import InboxItem from "../pages/InboxItem";
+import InboxItem from "../../pages/InboxItem";
 
 //	Tab icons
 import { personOutline, mailOutline, mapOutline } from "ionicons/icons";
 
 //  Import custom tab menu
-import TabMenu from "./TabMenu";
+import TabMenu from "../TabMenu";
 import SubRoutes from "./SubRoutes";
 
 //	Array of objects representing tab pages

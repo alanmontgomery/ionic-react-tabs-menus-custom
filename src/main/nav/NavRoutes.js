@@ -1,7 +1,7 @@
 import { IonRouterOutlet, IonSplitPane } from "@ionic/react";
 import { IonReactRouter } from "@ionic/react-router";
 import { Redirect, Route } from "react-router-dom";
-import SideMenu from "./SideMenu";
+import SideMenu from "../SideMenu";
 import { SubPages, Tabs, tabRoutes } from "./AllRoutes";
 
 const NavRoutes = () => {
