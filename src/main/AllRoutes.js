@@ -3,8 +3,10 @@ import Tab1 from "../pages/Tab1"
 import Tab2 from "../pages/Tab2";
 import Tab3 from "../pages/Tab3";
 
-//  Sub pages from tabs
+//  Main tab children
 import Settings from "../pages/Settings";
+
+//  Sub pages
 import InboxItem from "../pages/InboxItem";
 
 //	Tab icons
