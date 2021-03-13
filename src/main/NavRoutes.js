@@ -8,7 +8,6 @@ import { SubPages, Tabs, tabRoutes } from "./AllRoutes";
 const NavRoutes = () => {
 
     return (
-
         <IonReactRouter>
             <IonSplitPane contentId="main">
                 
@@ -19,7 +18,7 @@ const NavRoutes = () => {
                     <Route path="/tabs" render={ () => <Tabs />} />
                     <SubPages />
 
-                    <Route path="/" component={ Tab1 } exact={ true } />
+                    <Route path="/" component={ tabRoutes.filter(t => t.default)[0].component } exact={ true } />
                     <Redirect exact from="/" to={ tabRoutes.filter(t => t.default)[0].path.toString() }/>
                 </IonRouterOutlet>
             </IonSplitPane>
