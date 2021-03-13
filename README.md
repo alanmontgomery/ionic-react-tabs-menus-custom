@@ -27,15 +27,15 @@ __Other things included__
 - Navigating to sub pages from a list from a main page, e.g. `/tabs/tab2/1` making use of the `useParams` and `useIonViewWillEnter` hooks
 - Accessing properties associated to the current side menu setup in a tab page using context api
 
-## Adding a new tab to the tab menu
+## Adding a new tab to the tab menu and main app routing
 1. Go to `AllRoutes.js`
 2. Add an object to the `tabRoutes` array specifying a label, component, icon, path and a few flags
 
-## Adding a new tab child to the tab menu
+## Adding a new tab child to the main app routing
 1. Go to `AllRoutes.js`
 2. Add an object to the `tabChildrenRoutes` array specifying a label, component, icon, path and a few flags
 
-## Adding a new sub-page to app
+## Adding a new sub-page to app routing
 1. Go to `AllRoutes.js`
 2. Add an object to the `subPageRoutes` array specifying a label, component, icon, path setting `isTab` bool to false
 
