@@ -48,7 +48,7 @@ const Tab1 = props => {
 		{ 
 			text: "Settings sub page", 
 			icon: cogOutline, 
-			url: "/settings"
+			url: "/tabs/tab1/settings"
 		},
 		{ 
 			text: "Privacy", 
@@ -81,7 +81,7 @@ const Tab1 = props => {
 
 					<IonRow className="ion-text-center">
 						<IonCol size="12">
-							<Link to="/settings">
+							<Link to="/tabs/tab1/settings">
 								<IonButton size="small" color="primary">Settings Sub Page</IonButton>
 							</Link>
 						</IonCol>
