@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IonAvatar, IonButton, IonCol, IonGrid, IonIcon, IonImg, IonItem, IonLabel, IonNote, IonPage, IonRow, IonText } from '@ionic/react';
+import { IonAvatar, IonBadge, IonButton, IonCol, IonGrid, IonIcon, IonImg, IonItem, IonLabel, IonNote, IonPage, IonRow, IonText } from '@ionic/react';
 import { cogOutline, eyeOutline, logOutOutline, mailOutline, mapOutline, settingsOutline } from 'ionicons/icons';
 
 import './Tab1.css';
@@ -75,28 +75,27 @@ const Tab1 = props => {
 	return (
 		<IonPage id={ pageName }>
 			<CustomPage name={ pageName } sideMenu={ true } sideMenuPosition="start">
+				
+				<PageHeader count={ sideMenuOptions.length } pageName={ pageName } />
+				
+				<IonItem lines="none">
+					<IonAvatar>
+						<IonImg src="/assets/alan.jpg" />
+					</IonAvatar>
+					<IonLabel className="ion-text-wrap ion-padding">
+						<h1>Author</h1>
+						<h2>
+							Alan Montgomery
+							<span className="role">
+								<IonBadge color="primary">Mobile Team Lead</IonBadge>
+							</span>
+						</h2>
+						<p>
+							Hey there, I'm Alan! Hopefully you can take something away from this little sample app. Or even if it's to have a poke around and see how I personally like to do things, that's OK too 👏🏻. Check out each page, side menu and have a look at how things work.
+						</p>
+					</IonLabel>
+				</IonItem>
 				<IonGrid>
-					
-					<PageHeader count={ sideMenuOptions.length } pageName={ pageName } />
-
-					<IonItem>
-						<IonAvatar>
-							<IonImg src="/assets/alan.jpg" />
-						</IonAvatar>
-						<IonLabel className="ion-text-wrap ion-padding">
-							<h1>Author</h1>
-							<h2>
-								Alan Montgomery
-								<span className="role">
-									<IonNote>Mobile Team Lead</IonNote>
-								</span>
-							</h2>
-							<p>
-								Hey there, I'm Alan! Hopefully you can take something away from this little sample app. Or even if it's to have a poke around and see how I personally like to do things, that's OK too 👏🏻. Check out each page, side menu and have a look at how things work.
-							</p>
-						</IonLabel>
-					</IonItem>
-
 					<IonRow className="ion-text-center">
 						<IonCol size="12">
 							<IonText color="primary">
