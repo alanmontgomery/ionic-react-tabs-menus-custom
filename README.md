@@ -6,11 +6,16 @@ Rough example of using React Context API to control the side menu and custom pag
 then
 `ionic serve`
 
-- Custom TabMenu with TabRoutes
+_Check out this Twitter thread for some explanations (hopefully it doesn't outdate)_
+https://twitter.com/93alan/status/1370754596801552391
+
+- Custom TabMenu with Routes
+- Custom Tab Children pages
+- Custom Sub pages
 - Navigate to a url (page) or perform an action by click event
 - Changing side menu with react context api hook
 - Easy custom Side Menu per tab
-- Add an object to tabs array in `TabRoutes.js` to add a new tab to the main tab bar
+- Add an object to tabRoutes array in `AllRoutes.js` to add a new tab to the main tab bar
 
 __Other things included__
 - Example of rendering a list/items based on array of objects
@@ -23,12 +28,16 @@ __Other things included__
 - Accessing properties associated to the current side menu setup in a tab page using context api
 
 ## Adding a new tab to the tab menu
-1. Go to `TabRoutes.js`
-2. Add an object to the `tabs` array specifying a label, component, icon, path and a few flags
+1. Go to `AllRoutes.js`
+2. Add an object to the `tabRoutes` array specifying a label, component, icon, path and a few flags
+
+## Adding a new tab child to the tab menu
+1. Go to `AllRoutes.js`
+2. Add an object to the `tabChildrenRoutes` array specifying a label, component, icon, path and a few flags
 
 ## Adding a new sub-page to app
-1. Go to `TabRoutes.js`
-2. Add an object to the `subPages` array specifying a label, component, icon, path setting `isTab` bool to false
+1. Go to `AllRoutes.js`
+2. Add an object to the `subPageRoutes` array specifying a label, component, icon, path setting `isTab` bool to false
 
 ## Changing the side menu per tab
 1. Find the `sideMenuOptions` within the main tab JS file, e.g. `Tab1.js`
