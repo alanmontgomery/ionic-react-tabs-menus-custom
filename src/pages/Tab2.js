@@ -13,6 +13,7 @@ import { getInboxItems } from "../main/Utils";
 const Tab2 = props => {
 
 	const pageName = "Inbox";
+	var { sideMenuOptions } = props;
 	const setSideMenu = useSideMenuUpdate();
 
 	const [ Badge, setBadge ] = useState(true);
@@ -30,43 +31,13 @@ const Tab2 = props => {
 	//	Access other side menu options here
 	const sideMenu = useSideMenu();
 
-	const sideMenuOptions = [
-		{ 
-			text: "Go to Profile", 
-			icon: personOutline, 
-			url: "/tabs/tab1"
-		},
-		{ 
-			text: "Go to Places", 
-			icon: mapOutline, 
-			url: "/tabs/tab3"
-		},
-		{},
-		{
-			text: "Unread",
-			icon: mailUnreadOutline,
-			url: null,
-			clickEvent: () => handleModal(3)
-		},
-		{
-			text: "Archived",
-			icon: archiveOutline,
-			url: null,
-			clickEvent: () => handleModal(4)
-		},
-		{
-			text: "Change timestamp style",
-			icon: refreshOutline,
-			url: null,
-			clickEvent: () => setBadge(Badge => !Badge)
-		}
-	];
-
 	useEffect(() => {
 		
 		if (props.location.pathname === "/tabs/tab2") {
 			
 			setSideMenu({ options: sideMenuOptions, side: "start", pageName: pageName });
+
+			sideMenuOptions = sideMenuOptions.filter(m => m.text === "Change timestamp style")[0].clickEvent = () => setBadge(Badge => !Badge);
 		}
 	}, [ props.location ]);
 

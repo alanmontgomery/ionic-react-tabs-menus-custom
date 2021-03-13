@@ -126,7 +126,22 @@ export const getPlaceItems = () => {
     return places;
 }
 
-export const showTabMenu = (show) => {
+/**
+ * 
+ * @param {Boolean} spacer Renders a space between above and below item
+ * @param {String} text The text or "label" to show
+ * @param {*} icon The icon to show - This should be an imported Ion icon
+ * @param {String} url The url to navigate to e.g. "/tabs/tab2"
+ * @param {Function} clickEvent A click event to perform instead of url, leave blank and set in component if it's specific (Should be written like () => function())
+ * @returns A side menu object
+ */
+export const buildSideMenuObject = (spacer = false, text = "", icon = false, url = null, clickEvent = null) => {
 
-	document.querySelector("ion-tab-bar").style.display = show ? "" : "none";
+    return spacer ? {} : {
+
+        text,
+        icon,
+        url,
+        clickEvent
+    };
 }

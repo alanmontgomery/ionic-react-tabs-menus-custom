@@ -3,6 +3,9 @@ import Tab1 from "../../pages/Tab1"
 import Tab2 from "../../pages/Tab2";
 import Tab3 from "../../pages/Tab3";
 
+//  Side Menus
+import { tab1SideMenu, tab2SideMenu, tab3SideMenu } from "../PageSideMenus";
+
 //  Main tab children
 import Settings from "../../pages/Settings";
 
@@ -29,9 +32,9 @@ import SubRoutes from "./SubRoutes";
 //  path = the path which the tab is accessible
 export const tabRoutes = [
 
-    { label: "Profile", component: Tab1, icon: personOutline, path: "/tabs/tab1", default: true, isTab: true },
-    { label: "Inbox", component: Tab2, icon: mailOutline, path: "/tabs/tab2", default: false, isTab: true },
-    { label: "Places", component: Tab3, icon: mapOutline, path: "/tabs/tab3", default: false, isTab: true }
+    { label: "Profile", component: Tab1, icon: personOutline, path: "/tabs/tab1", default: true, isTab: true, sideMenu: true, sideMenuOptions: tab1SideMenu },
+    { label: "Inbox", component: Tab2, icon: mailOutline, path: "/tabs/tab2", default: false, isTab: true, sideMenu: true, sideMenuOptions: tab2SideMenu },
+    { label: "Places", component: Tab3, icon: mapOutline, path: "/tabs/tab3", default: false, isTab: true, sideMenu: true, sideMenuOptions: tab3SideMenu }
 ];
 
 //  Array of objects representing children pages of tabs

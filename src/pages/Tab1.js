@@ -9,10 +9,12 @@ import { PageHeader } from "../components/PageHeader";
 import { Modal } from "../components/Modal";
 import { useSideMenuUpdate, useSideMenu } from "../main/SideMenuProvider";
 import { Link } from "react-router-dom";
+import { tab1SideMenu } from "../main/PageSideMenus";
 
 const Tab1 = props => {
 
 	const pageName = "Profile";
+	const { sideMenuOptions } = props;
 	const setSideMenu = useSideMenuUpdate();
 
 	const [ showModal, setShowModal ] = useState(false);
@@ -20,49 +22,12 @@ const Tab1 = props => {
 
 	const handleModal = async (index) => {
 
-		await setModalOptions(sideMenuOptions[index]);
+		await setModalOptions(tab1SideMenu[index]);
 		setShowModal(true);
 	}
 	
 	//	Access other side menu options here
 	const sideMenu = useSideMenu();
-
-	const sideMenuOptions = [
-		{ 
-			text: "Go to Inbox", 
-			icon: mailOutline, 
-			url: "/tabs/tab2"
-		},
-		{ 
-			text: "Go to Places", 
-			icon: mapOutline, 
-			url: "/tabs/tab3"
-		},
-		{},
-		{ 
-			text: "Account Settings", 
-			icon: settingsOutline, 
-			url: null,
-			clickEvent: () => handleModal(3)
-		},
-		{ 
-			text: "Settings sub page", 
-			icon: cogOutline, 
-			url: "/tabs/tab1/settings"
-		},
-		{ 
-			text: "Privacy", 
-			icon: eyeOutline, 
-			url: null,
-			clickEvent: () => handleModal(5)
-		},
-		{ 
-			text: "Logout", 
-			icon: logOutOutline, 
-			url: null,
-			clickEvent: () => handleModal(6)
-		}
-	];
 
 	useEffect(() => {
 
@@ -77,7 +42,7 @@ const Tab1 = props => {
 			<CustomPage name={ pageName } sideMenu={ true } sideMenuPosition="start">
 				
 				<PageHeader count={ sideMenuOptions.length } pageName={ pageName } />
-				
+
 				<IonItem lines="none">
 					<IonAvatar>
 						<IonImg src="/assets/alan.jpg" />

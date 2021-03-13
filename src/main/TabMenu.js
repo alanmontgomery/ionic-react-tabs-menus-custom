@@ -10,11 +10,13 @@ const TabMenu = (props) => {
 
 				{ props.tabs.map((tab, i) => {
 
+					const TabComponent = tab.component;
+
 					if (tab.isTab) {
-						return <Route key={ i } path={ tab.path } component={ tab.component } exact={ true }/>;
+						return <Route key={ i } path={ tab.path } render={ (props) => <TabComponent { ...props } sideMenu={ tab.sideMenu } sideMenuOptions={ tab.sideMenuOptions } /> } exact={ true }/>;
 					} else {
 
-						return <Route key={ i } path={ tab.path } component={ tab.component } exact={ false } />;
+						return <Route key={ i } path={ tab.path } render={ (props) => <TabComponent {...props} sideMenu={ tab.sideMenu } sideMenuOptions={ tab.sideMenuOptions } /> } exact={ false } />;
 					}
 				})}
 
