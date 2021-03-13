@@ -20,8 +20,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
-//	Import tabs
-// import { Tabs } from "./main/TabRoutes";
+//	Import NavRoutes which holds tabs and sub pages
 import NavRoutes from "./main/NavRoutes";
 import { SideMenuProvider } from "./main/SideMenuProvider";
 
@@ -32,7 +31,6 @@ const App = () => {
 			<IonApp>
 				<SideMenuProvider>
 					<NavRoutes />
-					{/* <Tabs /> */}
 				</SideMenuProvider>
 			</IonApp>
 	);
