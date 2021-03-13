@@ -6,7 +6,9 @@ const SubRoutes = (props) => {
             <>
                 { props.routes.map((route, i) => {
 
-                    return <Route key={ i } path={ route.path } component={ route.component } exact={ false } />;
+                    const RouteComponent = route.component;
+
+                    return <Route key={ i } path={ route.path } render={ (props) => <RouteComponent { ...props } sideMenu={ route.sideMenu ? true : false } sideMenuOptions={ route.sideMenuOptions ? route.sideMenuOptions : false } /> } exact={ false } />;
                 })}
             </>
 	);
