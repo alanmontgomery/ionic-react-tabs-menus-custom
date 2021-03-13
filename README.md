@@ -19,6 +19,7 @@ __Other things included__
 - Example of changing component rendered based on state
 - Navigating to pages throughout the app `/tabs/tab1` from side menu, and content area
 - Navigating to modals (or showing modals) throughout the app from different places in the app including side menu
+- Navigating to sub pages from a list from a main page, e.g. `/tabs/tab2/1` making use of the `useParams` and `useIonViewWillEnter` hooks
 - Accessing properties associated to the current side menu setup in a tab page using context api
 
 ## Adding a new tab to the tab menu
