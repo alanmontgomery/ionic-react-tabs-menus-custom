@@ -20,7 +20,7 @@ const TabMenu = (props) => {
 					}
 				})}
 
-				<Redirect exact from="/" to={ props.tabs.filter(t => t.default)[0].path.toString() }/>
+				{/* <Redirect exact from="/" to={ props.tabs.filter(t => t.default)[0].path.toString() }/> */}
 			</IonRouterOutlet>
 
 			<IonTabBar slot={ props.position }>

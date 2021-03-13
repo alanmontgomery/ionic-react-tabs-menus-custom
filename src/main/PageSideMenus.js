@@ -7,7 +7,7 @@ export const tab1SideMenu = [
     buildSideMenuObject(false, "Go to Places", mapOutline, "/tabs/tab3"),
     buildSideMenuObject(true),
     buildSideMenuObject(false, "Account Settings", settingsOutline, null),
-    buildSideMenuObject(false, "Settings Sub Page", cogOutline, "/tabs/tab1/settings"),
+    buildSideMenuObject(false, "Settings Sub Page", cogOutline, "/settings"),
     buildSideMenuObject(false, "Privacy", eyeOutline, null),
     buildSideMenuObject(false, "Logout", logOutOutline, null)
 ];

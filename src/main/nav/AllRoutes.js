@@ -48,7 +48,7 @@ export const tabRoutes = [
 //  E.g. /tabs/tab1/child
 const tabChildrenRoutes = [
 
-    { component: Settings, path: "/tabs/tab1/settings", isTab: false },
+    { component: InboxItem, path: "/tabs/tab2/:id", isTab: false },
 ];
 
 //  Array of objects representing sub pages
@@ -61,7 +61,7 @@ const tabChildrenRoutes = [
 //  E.g. /child
 const subPageRoutes = [
 
-    { component: InboxItem, path: "/inbox/:id" },
+    { component: Settings, path: "/settings" },
 ];
 
 //  Let's combine these together as they need to be controlled within the same IonRouterOutlet
@@ -71,4 +71,4 @@ const tabsAndChildrenRoutes = [ ...tabRoutes, ...tabChildrenRoutes ];
 export const SubPages = () => ( <SubRoutes routes={ subPageRoutes } /> );
 
 //	Render tab menu
-export const Tabs = () => ( <TabMenu tabs={ tabsAndChildrenRoutes } subPages={ subPageRoutes } position="bottom" /> );
+export const Tabs = () => ( <TabMenu tabs={ tabsAndChildrenRoutes } position="bottom" /> );
