@@ -1,19 +1,16 @@
-import { useEffect, useState } from "react";
-import { archiveOutline, checkmarkOutline, mailOutline, mailUnreadOutline, mapOutline, personCircle, personOutline, refreshOutline, settingsSharp } from 'ionicons/icons';
-import { useSideMenuUpdate, useSideMenu } from "../main/SideMenuProvider";
+import { useState } from "react";
+import { personCircle } from 'ionicons/icons';
 
 import './Tab2.css';
 import CustomPage from "../main/CustomPage";
 
-import { PageHeader } from "../components/PageHeader";
-import { Modal } from "../components/Modal";
-import { IonBadge, IonChip, IonCol, IonGrid, IonIcon, IonItem, IonLabel, IonList, IonNote, IonPage, IonRow, useIonViewDidEnter, useIonViewWillEnter } from '@ionic/react';
+import { IonIcon, IonItem, IonLabel, IonNote, IonPage, useIonViewWillEnter } from '@ionic/react';
 import { useParams } from "react-router";
 import { getInboxItemByID } from "../main/Utils";
 
 import "./InboxItem.css";
 
-const InboxItem = props => {
+const InboxItem = () => {
 
 	const pageName = "Inbox";
     const params = useParams();
@@ -30,7 +27,7 @@ const InboxItem = props => {
 	return (
 		<IonPage id="view-inbox-item">
 			<CustomPage showLargeHeader={ false } name={ pageName } sideMenu={ false } backButton={ true }>
-                {inboxItem ? (
+                { inboxItem ? (
                     <>
                         <IonItem>
                             <IonIcon icon={ personCircle } color="primary"></IonIcon>
