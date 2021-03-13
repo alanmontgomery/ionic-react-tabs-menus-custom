@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IonButton, IonCol, IonGrid, IonPage, IonRow, IonText } from '@ionic/react';
+import { IonAvatar, IonButton, IonCol, IonGrid, IonIcon, IonImg, IonItem, IonLabel, IonNote, IonPage, IonRow, IonText } from '@ionic/react';
 import { cogOutline, eyeOutline, logOutOutline, mailOutline, mapOutline, settingsOutline } from 'ionicons/icons';
 
 import './Tab1.css';
@@ -79,13 +79,23 @@ const Tab1 = props => {
 					
 					<PageHeader count={ sideMenuOptions.length } pageName={ pageName } />
 
-					<IonRow className="ion-text-center">
-						<IonCol size="12">
-							<Link to="/tabs/tab1/settings">
-								<IonButton size="small" color="primary">Settings Sub Page</IonButton>
-							</Link>
-						</IonCol>
-					</IonRow>
+					<IonItem>
+						<IonAvatar>
+							<IonImg src="/assets/alan.jpg" />
+						</IonAvatar>
+						<IonLabel className="ion-text-wrap ion-padding">
+							<h1>Author</h1>
+							<h2>
+								Alan Montgomery
+								<span className="role">
+									<IonNote>Mobile Team Lead</IonNote>
+								</span>
+							</h2>
+							<p>
+								Hey there, I'm Alan! Hopefully you can take something away from this little sample app. Or even if it's to have a poke around and see how I personally like to do things, that's OK too 👏🏻. Check out each page, side menu and have a look at how things work.
+							</p>
+						</IonLabel>
+					</IonItem>
 
 					<IonRow className="ion-text-center">
 						<IonCol size="12">
