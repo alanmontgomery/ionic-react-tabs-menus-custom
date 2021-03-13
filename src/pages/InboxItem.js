@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { personCircle } from 'ionicons/icons';
 
 import './Tab2.css';
@@ -6,11 +6,11 @@ import CustomPage from "../main/CustomPage";
 
 import { IonIcon, IonItem, IonLabel, IonNote, IonPage, useIonViewWillEnter } from '@ionic/react';
 import { useParams } from "react-router";
-import { getInboxItemByID } from "../main/Utils";
+import { getInboxItemByID, showTabMenu } from "../main/Utils";
 
 import "./InboxItem.css";
 
-const InboxItem = () => {
+const InboxItem = props => {
 
 	const pageName = "Inbox";
     const params = useParams();
@@ -23,6 +23,14 @@ const InboxItem = () => {
         const tempInboxItem = getInboxItemByID(inboxItemID);
         setInboxItem(tempInboxItem);
     });
+    
+    useEffect(() => {
+		
+		if (props.location.pathname.includes("/tabs/tab2/")) {
+			
+			showTabMenu(false);
+		}
+	}, [ props.location ]);
 
 	return (
 		<IonPage id="view-inbox-item">

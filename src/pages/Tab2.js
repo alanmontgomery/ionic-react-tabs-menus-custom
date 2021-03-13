@@ -8,7 +8,7 @@ import CustomPage from "../main/CustomPage";
 import { PageHeader } from "../components/PageHeader";
 import { Modal } from "../components/Modal";
 import { IonBadge, IonChip, IonGrid, IonItem, IonLabel, IonList, IonNote, IonPage } from '@ionic/react';
-import { getInboxItems } from "../main/Utils";
+import { getInboxItems, showTabMenu } from "../main/Utils";
 
 const Tab2 = props => {
 
@@ -67,6 +67,7 @@ const Tab2 = props => {
 		if (props.location.pathname === "/tabs/tab2") {
 			
 			setSideMenu({ options: sideMenuOptions, side: "start", pageName: pageName });
+			showTabMenu(true);
 		}
 	}, [ props.location ]);
 

@@ -125,3 +125,8 @@ export const getPlaceItems = () => {
 
     return places;
 }
+
+export const showTabMenu = (show) => {
+
+	document.querySelector("ion-tab-bar").style.display = show ? "" : "none";
+}
