@@ -1,6 +1,8 @@
 import { IonHeader, IonContent, IonToolbar, IonTitle, IonMenuToggle, IonItem, IonIcon, IonMenu, IonLabel, IonList } from '@ionic/react';
 import { useSideMenu } from "../main/SideMenuProvider";
 
+import "../theme/SideMenu.css";
+
 const SideMenu = (props) => {
 
 	const { type = "overlay" } = props;
@@ -15,12 +17,12 @@ const SideMenu = (props) => {
 				</IonToolbar>
 			</IonHeader>
 
-			<IonContent id="main">
+			<IonContent forceOverscroll={ false } id="main">
 
 				{ mainContent }
 
 				{ menuOptions !== null &&
-					<IonList>
+					<IonList lines="none">
 						{ menuOptions && menuOptions.options.map((menuOption, i) => {
 							
 							if (menuOption.url === null) {
@@ -28,7 +30,7 @@ const SideMenu = (props) => {
 								return (
 
 									<IonMenuToggle key={ i } autoHide={ true }>
-										<IonItem onClick={ menuOption.clickEvent } lines="full" detail={ true }>
+										<IonItem onClick={ menuOption.clickEvent } lines="none" detail={ false }>
 											<IonIcon slot="start" icon={ menuOption.icon } />
 											<IonLabel>{ menuOption.text }</IonLabel>
 										</IonItem>
@@ -40,7 +42,7 @@ const SideMenu = (props) => {
 									return (
 
 										<IonMenuToggle key={ i } autoHide={ true }>
-											<IonItem routerLink={ menuOption.url } lines="full">
+											<IonItem detail={ false } routerLink={ menuOption.url } lines="none">
 												<IonIcon slot="start" icon={ menuOption.icon } />
 												<IonLabel>{ menuOption.text }</IonLabel>
 											</IonItem>
