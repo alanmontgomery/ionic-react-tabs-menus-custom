@@ -55,6 +55,6 @@ const InboxItem = props => {
 			</CustomPage>
 		</IonPage>
 	);
-};
+}
 
 export default InboxItem;

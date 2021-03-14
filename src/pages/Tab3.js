@@ -92,6 +92,6 @@ const Tab3 = props => {
 			</CustomPage>
 		</IonPage>
 	);
-};
+}
 
 export default Tab3;

@@ -34,6 +34,6 @@ const App = () => {
 				</SideMenuProvider>
 			</IonApp>
 	);
-};
+}
 
 export default App;

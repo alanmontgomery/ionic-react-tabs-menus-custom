@@ -64,6 +64,6 @@ const CustomPage = (props) => {
             </IonContent>
         </>
     );
-};
+}
 
 export default CustomPage;
