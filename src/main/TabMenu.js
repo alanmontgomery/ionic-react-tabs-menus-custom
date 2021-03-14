@@ -13,14 +13,12 @@ const TabMenu = (props) => {
 					const TabComponent = tab.component;
 
 					if (tab.isTab) {
-						return <Route key={ i } path={ tab.path } render={ (props) => <TabComponent { ...props } sideMenu={ tab.sideMenu ? true : false } sideMenuOptions={ tab.sideMenuOptions ? tab.sideMenuOptions : false } /> } exact={ true }/>;
+						return <Route key={ `tab_route_${ i }` } path={ tab.path } render={ (props) => <TabComponent { ...props } sideMenu={ tab.sideMenu ? true : false } sideMenuOptions={ tab.sideMenuOptions ? tab.sideMenuOptions : false } /> } exact={ true }/>;
 					} else {
 
-						return <Route key={ i } path={ tab.path } render={ (props) => <TabComponent {...props} sideMenu={ tab.sideMenu ? true : false } sideMenuOptions={ tab.sideMenuOptions ? tab.sideMenuOptions : false } /> } exact={ false } />;
+						return <Route key={ `child_tab_route_${ i }` } path={ tab.path } render={ (props) => <TabComponent {...props} sideMenu={ tab.sideMenu ? true : false } sideMenuOptions={ tab.sideMenuOptions ? tab.sideMenuOptions : false } /> } exact={ false } />;
 					}
 				})}
-
-				{/* <Redirect exact from="/" to={ props.tabs.filter(t => t.default)[0].path.toString() }/> */}
 			</IonRouterOutlet>
 
 			<IonTabBar slot={ props.position }>
@@ -30,7 +28,7 @@ const TabMenu = (props) => {
 					if (tab.isTab) {
 
 						return (
-							<IonTabButton key={ `tab_${ i + 1 }` } tab={ `tab_${ i + 1 }` } href={ tab.path }>
+							<IonTabButton key={ `tab_button_${ i + 1 }` } tab={ `tab_${ i + 1 }` } href={ tab.path }>
 								<IonIcon icon={ tab.icon } />
 								{ tab.label && <IonLabel>{ tab.label }</IonLabel> }
 							</IonTabButton>
