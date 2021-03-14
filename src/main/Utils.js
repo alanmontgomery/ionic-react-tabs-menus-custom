@@ -139,6 +139,7 @@ export const getPlaceItems = () => {
 export const buildSideMenuObject = (spacer = false, text = "", description = "", icon = false, url = null, clickEvent = null) => {
 
     const title = text;
+    
     if (description !== "" && description !== null) {
 
         text = getInformativeSideMenuItem(text, description);
