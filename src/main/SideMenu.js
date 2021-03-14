@@ -1,4 +1,4 @@
-import { IonHeader, IonContent, IonToolbar, IonTitle, IonMenuToggle, IonItem, IonIcon, IonMenu, IonLabel, IonList } from '@ionic/react';
+import { IonHeader, IonContent, IonToolbar, IonTitle, IonMenuToggle, IonItem, IonIcon, IonMenu, IonLabel, IonList, IonListHeader } from '@ionic/react';
 import { useSideMenu } from "../main/SideMenuProvider";
 
 import "../theme/SideMenu.css";
@@ -20,6 +20,8 @@ const SideMenu = (props) => {
 			<IonContent forceOverscroll={ false } id="main">
 
 				{ mainContent }
+
+				<IonListHeader>{ menuOptions.pageName }</IonListHeader>
 
 				{ menuOptions !== null &&
 					<IonList lines="none">
