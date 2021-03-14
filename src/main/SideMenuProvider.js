@@ -19,7 +19,7 @@ export function SideMenuProvider({ children }) {
     const setSideMenu = (menuOptions) => {
         
         setSideMenuOptions(menuOptions);
-    };
+    }
 
     return (
         <SideMenuContext.Provider value={ sideMenuOptions }>
@@ -28,4 +28,4 @@ export function SideMenuProvider({ children }) {
             </SideMenuUpdateContext.Provider>
         </SideMenuContext.Provider>
     );
-};
+}

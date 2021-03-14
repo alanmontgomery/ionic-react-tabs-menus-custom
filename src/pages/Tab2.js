@@ -80,6 +80,6 @@ const Tab2 = props => {
 			</CustomPage>
 		</IonPage>
 	);
-};
+}
 
 export default Tab2;

@@ -22,6 +22,6 @@ const Settings = props => {
 			</CustomPage>
 		</IonPage>
 	);
-};
+}
 
 export default Settings;

@@ -54,6 +54,6 @@ const SideMenu = (props) => {
 			</IonContent>
 		</IonMenu>
 	);
-};
+}
 
 export default SideMenu;
