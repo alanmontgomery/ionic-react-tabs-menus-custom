@@ -3,32 +3,32 @@ import { buildSideMenuObject } from "./Utils";
 
 export const tab1SideMenu = [
 
-    buildSideMenuObject(false, "Go to Inbox", mailOutline, "/tabs/tab2"),
-    buildSideMenuObject(false, "Go to Places", mapOutline, "/tabs/tab3"),
+    buildSideMenuObject(false, "Inbox", "Navigates to Inbox page", mailOutline, "/tabs/tab2"),
+    buildSideMenuObject(false, "Places", "Navigates to Places page", mapOutline, "/tabs/tab3"),
     buildSideMenuObject(true),
-    buildSideMenuObject(false, "Account Settings", settingsOutline, null),
-    buildSideMenuObject(false, "Settings Sub Page", cogOutline, "/settings"),
-    buildSideMenuObject(false, "Privacy", eyeOutline, null),
-    buildSideMenuObject(false, "Logout", logOutOutline, null)
+    buildSideMenuObject(false, "Account Settings", null, settingsOutline, null),
+    buildSideMenuObject(false, "Settings Sub Page", "Opens settings sub page", cogOutline, "/settings"),
+    buildSideMenuObject(false, "Privacy", null, eyeOutline, null),
+    buildSideMenuObject(false, "Logout", null, logOutOutline, null)
 ];
 
 export const tab2SideMenu = [
 
-    buildSideMenuObject(false, "Go to Profile", personOutline, "/tabs/tab1"),
-    buildSideMenuObject(false, "Go to Places", mapOutline, "/tabs/tab3"),
+    buildSideMenuObject(false, "Profile", "Navigates to Profile page", personOutline, "/tabs/tab1"),
+    buildSideMenuObject(false, "Places", "Navigates to Places page", mapOutline, "/tabs/tab3"),
     buildSideMenuObject(true),
-    buildSideMenuObject(false, "Unread", mailUnreadOutline, null),
-    buildSideMenuObject(false, "Archived", archiveOutline, null),
-    buildSideMenuObject(false, "Change timestamp style", refreshOutline, null)
+    buildSideMenuObject(false, "Unread", null, mailUnreadOutline, null),
+    buildSideMenuObject(false, "Archived", null, archiveOutline, null),
+    buildSideMenuObject(false, "Timestamp style", "Changes the style of the timestamp", refreshOutline, null)
 ];
 
 export const tab3SideMenu = [
 
-    buildSideMenuObject(false, "Go to Profile", personOutline, "/tabs/tab1"),
-    buildSideMenuObject(false, "Go to Inbox", mailOutline, "/tabs/tab2"),
+    buildSideMenuObject(false, "Profile", "Navigates to Profile page", personOutline, "/tabs/tab1"),
+    buildSideMenuObject(false, "Inbox", "Navigates to Inbox page", mailOutline, "/tabs/tab2"),
     buildSideMenuObject(true),
-    buildSideMenuObject(false, "Pubs", beerOutline, null),
-    buildSideMenuObject(false, "Restaurants", restaurantOutline, null),
-    buildSideMenuObject(false, "Golf Courses", golfOutline, null),
-    buildSideMenuObject(false, "Hospitals", pulseOutline, null)
+    buildSideMenuObject(false, "Pubs", null, beerOutline, null),
+    buildSideMenuObject(false, "Restaurants", null, restaurantOutline, null),
+    buildSideMenuObject(false, "Golf Courses", null, golfOutline, null),
+    buildSideMenuObject(false, "Hospitals", null, pulseOutline, null)
 ];

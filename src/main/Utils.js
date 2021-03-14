@@ -130,18 +130,43 @@ export const getPlaceItems = () => {
  * 
  * @param {Boolean} spacer Renders a space between above and below item
  * @param {String} text The text or "label" to show
+ * @param {String} description The description to show under the text
  * @param {*} icon The icon to show - This should be an imported Ion icon
  * @param {String} url The url to navigate to e.g. "/tabs/tab2"
  * @param {Function} clickEvent A click event to perform instead of url, leave blank and set in component if it's specific (Should be written like () => function())
  * @returns A side menu object
  */
-export const buildSideMenuObject = (spacer = false, text = "", icon = false, url = null, clickEvent = null) => {
+export const buildSideMenuObject = (spacer = false, text = "", description = "", icon = false, url = null, clickEvent = null) => {
+
+    const title = text;
+    if (description !== "" && description !== null) {
+
+        text = getInformativeSideMenuItem(text, description);
+    }
 
     return spacer ? {} : {
-
+        
+        title,
         text,
         icon,
         url,
         clickEvent
     };
+}
+
+/**
+ * 
+ * @param {*} text Text of a side menu object
+ * @param {*} description Description of a side menu object
+ * @returns A span and h6 holding the text and description
+ */
+const getInformativeSideMenuItem = (text, description) => {
+
+    return (
+        <>
+			<span className="menu-title">{ text }</span>
+			<br />
+			<h6 className="sub-menu-title">{ description }</h6>
+		</>
+    );
 }

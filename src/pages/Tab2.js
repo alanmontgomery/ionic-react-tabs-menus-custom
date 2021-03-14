@@ -37,7 +37,7 @@ const Tab2 = props => {
 			
 			setSideMenu({ options: sideMenuOptions, side: "start", pageName: pageName });
 
-			sideMenuOptions = sideMenuOptions.filter(m => m.text === "Change timestamp style")[0].clickEvent = () => setBadge(Badge => !Badge);
+			sideMenuOptions = sideMenuOptions.filter(m => m.title === "Timestamp style")[0].clickEvent = () => setBadge(Badge => !Badge);
 		}
 	}, [ props.location ]);
 
