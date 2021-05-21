@@ -64,3 +64,5 @@ export const tab1SideMenu = [
 ```
 - url can be like `/tabs/tab1`
 - clickEvent can be a function, can be a global function call from within `PageSideMenus.js`, alternatively find your side menu option in a loop/filter on the main component and reassign the clickEvent object property
+
+If you'd like to support, you can <a className="link" href="https://www.buymeacoffee.com/ionicreacthub" target="_blank" rel="noopener">buy me a coffee</a> ☕️
